@@ -17,7 +17,9 @@ describe('Pruebas en <FirstApp/>', () => {
 
   test('debe de mostrar el titulo en un h1', () => {
     render(<FirstApp title={title} />)
-    expect(screen.getByRole('heading', { leavel: 1 }).innerHTML).toBe(title)
+    expect(screen.getByRole('heading', { leavel: 1 }).innerHTML).toContain(
+      title
+    )
   })
 
   test('debe de mostarar el subtitulo enviado por las props', () => {
