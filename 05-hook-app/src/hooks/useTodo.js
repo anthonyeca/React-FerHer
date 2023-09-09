@@ -36,10 +36,20 @@ export const useTodo = () => {
     })
   }
 
+  const totalTodo = (todos) => {
+    return `TodoApp: ${todos.length} `
+  }
+
+  const pendingTodo = (todos) => {
+    return `Pendientes: ${todos.filter((todo) => todo.done != true).length}`
+  }
+
   return {
     todos,
     handleDeleteTodo,
     handleToggleTodo,
     handleNewTodo,
+    totalTodo,
+    pendingTodo,
   }
 }
