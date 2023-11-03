@@ -17,4 +17,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+  env: {
+    jest: true,
+  },
 }
